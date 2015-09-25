@@ -377,7 +377,7 @@ module powerbi.visuals {
 
             var selectionManager = this.selectionManager;
             textGroup.on('mouseover', function (d) {
-                textGroup.style("cursor","url('https://s3.amazonaws.com/powerbicontest/images/magLens15x24.png'), auto");
+                textGroup.style("cursor","url('https://s3.amazonaws.com/powerbicontest/images/magLens25x40.png'), auto");
             });
             textGroup.on('mouseout', function (d) {
                 textGroup.style("cursor","'default'");
