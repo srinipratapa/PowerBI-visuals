@@ -48,7 +48,8 @@ module powerbi.visuals {
     }
 
 
-    //Code adapted from the implementation by Jason Davies at https://github.com/d3/d3-plugins/tree/master/fisheye
+    //Code adapted from the implementation by Jason Davies 
+    //at https://github.com/d3/d3-plugins/tree/master/fisheye
     export class D3FisheyeDistortion{
         
         baseScale:D3.Scale.IdentityScale;
