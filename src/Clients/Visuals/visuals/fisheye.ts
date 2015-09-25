@@ -359,7 +359,6 @@ module powerbi.visuals {
                 .on('click', () => this.selectionManager.clear().then(() => textGroup.style('opacity', 1)));
             
             
-            this.fisheyeBody.on("mousemove", null);
             this.fisheyeBody.on("mousemove", function(){
                 var mouse = d3.mouse(this);
                 d3FisheyeLocal.focus(mouse[1]);
@@ -377,6 +376,12 @@ module powerbi.visuals {
             });
 
             var selectionManager = this.selectionManager;
+            textGroup.on('mouseover', function (d) {
+                textGroup.style("cursor","url('https://s3.amazonaws.com/powerbicontest/images/magLens15x24.png'), auto");
+            });
+            textGroup.on('mouseout', function (d) {
+                textGroup.style("cursor","'default'");
+            });
             textGroup.on('click', function (d) {
                 selectionManager.select(d.selector).then((ids) => {
                     if (ids.length > 0) {
