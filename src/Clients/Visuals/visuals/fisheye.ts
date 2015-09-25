@@ -348,8 +348,10 @@ module powerbi.visuals {
 
             var textGroup = textGroupData.append("text")
             .attr("class",".categoryNode")
+            .attr("fill", "teal")
             .text(function(d:FisheyeDataPoint){return d.value})
             .attr("y", function(x,i){return d3FisheyeLocal.scale(ySteps[i])}).attr("dy", -10)
+            .attr("font-size",10)
 
             this.fisheyeBody
                 .on('click', () => this.selectionManager.clear().then(() => textGroup.style('opacity', 1)));
